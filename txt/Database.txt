@@ -1,0 +1,82 @@
+Database
+
+	БД: VK_hock
+		CREATE DATABASE VK_hock
+	
+	
+	Таблицы
+		group_query_hockey 	- таблица с группами ВКонтакте по запросу хоккей
+		id_members			- таблица с id участников хоккейных групп
+		data_member			- таблица с данными пользователя
+		top_posts			- таблица с последними 100 постами заданных групп
+		
+		
+		
+		
+	group_query_hockey - таблица с группами ВКонтакте по запросу хоккей
+		name_group						название группы
+		link_group						ссылка на страницу группы
+		count_member					количество участников группы
+		link_img_group					ссылка на логотип группы
+		
+		создание таблицы
+			CREATE TABLE group_query_hockey (name_group VARCHAR(255), link_group VARCHAR(255), count_member INT, link_img_group VARCHAR(255))
+			
+	id_members			- таблица с id участников хоккейных групп
+		id_members		- id участника
+		name_group		- хоккейная группа
+		
+		создание таблицы
+			CREATE TABLE id_members (id_members INT, name_group VARCHAR(255))
+			
+	data_member		- таблица с данными пользователя
+		id_member		- id пользователя
+		count_members	- количество друзей пользователя
+		
+		создание таблицы
+			CREATE TABLE data_member (id_member INT, count_members INT)
+	
+	top_posts		- таблица с последними 100 постами заданных групп
+		id_post			- id поста
+		id_group		- id группы
+		date_post		- дата размещения поста
+		time_post		- время размещения поста
+		text_post		- текст поста
+		likes_post		- количество лайков полученных постом
+		reposts_post	- количество репостов поста
+		views_post		- количество просмотров поста
+		comments_post	- количество комменатриев к посту
+		link_post		- ссылка на страницы с постом
+			
+		создание таблицы
+			CREATE TABLE top_posts (id_post INT, id_group INT, date_post INT, time_post TIME, text_post TEXT, likes_post INT, reposts_post INT, views_post INT, comments_post INT, link_post VARCHAR (255))
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
